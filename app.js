@@ -7,7 +7,7 @@ const expressSanitizer = require("express-sanitizer"),
 
 // APP CONFIG
 mongoose.connect(
-  "mongodb://localhost/restful_blog_app",
+  "mongodb://localhost/train_blog_app",
   { useNewUrlParser: true }
 );
 app.set("view engine", "ejs");
@@ -112,7 +112,7 @@ app.delete("/blogs/:id", (req, res) => {
   });
   //redirect somewhere
 });
-
-app.listen(3333, () => {
+const port = 3333;
+app.listen(port, () => {
   console.log("MALIK ! Server is running on port 3333");
 });
