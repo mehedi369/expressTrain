@@ -113,6 +113,10 @@ app.delete("/blogs/:id", (req, res) => {
   //redirect somewhere
 });
 const port = 3333;
-app.listen(port, () => {
-  console.log("MALIK ! Server is running on port 3333");
+app.listen(port, err => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("MALIK ! Server is running on port 3333");
+  }
 });
